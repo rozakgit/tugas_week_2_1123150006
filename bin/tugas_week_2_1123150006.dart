@@ -27,17 +27,25 @@ void main() {
     }
     final a = _readNumber('Masukkan angka pertama');
     final b = _readNumber('Masukkan angka kedua');
+    // Lakukan operasi sesuai pilihan user
     switch (pilih) {
-      case '1':
+      case '1': // Operasi penjumlahan
         print('Hasil: ${a + b}');
         break;
       case '2':
-      //...
+        print('Hasil: ${a - b}');
+        break;
       case '3':
-      //...
+        print('Hasil: ${a * b}');
+        break;
       case '4':
-      //....
-      default:
+        if (b == 0) {
+          print('Error: Tidak bisa membagi dengan nol.');
+        } else {
+          print('Hasil: ${a / b}');
+        }
+        break;
+      default: // Jika pilihan tidak sesuai menu
         print('Pilihan tidak dikenal.');
     }
   }
